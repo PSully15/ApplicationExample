@@ -34,10 +34,10 @@ class AddSnackForm(FlaskForm):
     ])
 
 
-class NewEmployeeForm(FlaskForm):
+class EmployeeForm(FlaskForm):
     """Form for creating an employee"""
 
-    name = StringField("Employee Name")
+    name = StringField("Employee Name", validators=[InputRequired(message="Name can't be blank")])
     state = SelectField("State", choices=[
         (st, st) for st in states
     ])
