@@ -6,20 +6,21 @@
 
     <div class="row justify-content-center">
       <div class="col-md-8">
-        {{form.name.label(class_="text-info")}}
+        <!-- {{form.name.label(class_="text-info")}}
 
         {{form.name(class_="form-control form-control-lg")}}
         
         {{form.state.label(class_="text-danger")}}
         
-        {{form.state(class_="form-control")}}
+        {{form.state(class_="form-control")}} -->
 
-        <!-- <form method="POST">
+        <form method="POST">
           {{ form.hidden_tag() }}
 
           {% for field in form if field.widget.input_type != 'hidden' %}
             <div class="form-group">
               {{field.label}}
+
               {{field(class_="form-control")}}
 
               {% for err in field.errors %}
@@ -29,10 +30,12 @@
               {% endfor %}
             </div>
           {% endfor %}
+
           <button class="btn btn-success btn-lg">Submit</button>
+          
           <a href="/phones" class="btn btn-danger btn-lg">Go Back</a>
         </form>
       </div>
     </div>
-  </div> -->
+  </div> 
 {% endblock %}
